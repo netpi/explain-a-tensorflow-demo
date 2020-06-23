@@ -61,7 +61,7 @@
 
 这些图片都是通过空间的矩阵的方式存储的：
 
-![](https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/lk9o4.png)
+![](image/2.png)
 
 这样我们就明白这段代码的意思了，是从 mnist 中获取用于训练的的数据集集（ x_trian，y_train ），以及用于测试的数据集（ x_test，y_test ）。
 *  x_trian 形状为 (6000, 28, 28) ，表示 6000 张 28*28的图片。
@@ -121,7 +121,7 @@ Layer2 传入了参数 `activation='relu'`，意思是用 relu 作为激活函�
 所以 relu 是激活函数的一种，用于神经元的激活 -- 根据上一个 Layer 给予的刺激算出神经元最后输出（显示）的那个数字。
 Layer2 层有 128个神经元，这128个神经元会和 Layer1 中 728 个神经元相互连接，共将产生 `728 * 128 =93184` 权重（weights）各自不同的连接 。Layer1 中神经元的输出将与连接到 layer2 的权重值进行加权求和，得到的结果会被带入 `relu` 函数，最终输出一个新的值作为 Layer2 中神经元的输出。
 
-![](https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/kkgra.png)
+![](./image/relu.png)
 
 **第三个 Layer**
 ```py
@@ -131,7 +131,7 @@ Layer2 层有 128个神经元，这128个神经元会和 Layer1 中 728 个神�
 Dropout layer 的主要作用就是防止过度拟合。过渡拟合现象主要表现是：**最终模型在训练集上效果好；在测试集上效果差。模型泛化能力弱。**
 Dropout 解决过度拟合的办法之一，就是随机丢弃一部神经元。Demo 中就是使用  Dropout 随机丢弃 20% 神经元。
 
-![](https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/ljirl.png)
+![](./image/dropout.ong)
 
 **第四个 Layer**
 
@@ -170,7 +170,7 @@ tf.keras.layers
 
 Demo 中 epochs = 5  是因为 1次 epoch 很可能得不到最优的权重（weights）。 既然 1 次不能满足，那就 5 次，5 次还不满足就 10 次，直到效果最小化 Loss 的效果不再变化。
 
-![](https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/vi2f7.png)
+![](./image/3.png)
 
 - - - - -
 ## 总结
