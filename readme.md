@@ -1,7 +1,7 @@
 ![](https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/31hy7.png)
 
 >![](https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/e36du.png)
->  我们总认为「机器学习」门槛高、难入门。这是因为这里有太多晦涩的概念「神经网络」、「评估指标」、「优化算法」等让初学者老是有种盲人摸象的感觉。甚至连理解一个 Tensorflow 官方 Demo 都感觉吃力，因此不少开发者就有过「机器学习从入门到放弃」的经历。**
+> 我们总有一种感觉，机器学习门槛高、难入门。这是因为这里有太多晦涩的概念「神经网络」、「评估指标」、「优化算法」等让初学者老是有种盲人摸象的感觉。甚至连理解一个 Tensorflow 官方 Demo 都感觉吃力，因此不少开发者就有过「机器学习从入门到放弃」的经历。
 > ​本文站在全局视角，通过分析一个 TensorFlow 官方的 Demo 来达到俯瞰一个「机器学习」系统的效果，从而让读者看清这个头大象的全貌，帮助初学者入门「机器学习」。
 
 ## 如何理解机器学习系统
@@ -61,7 +61,7 @@
 
 这些图片都是通过空间的矩阵的方式存储的：
 
-![](https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/zsn5g.png)
+![](https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/lk9o4.png)
 
 这样我们就明白这段代码的意思了，是从 mnist 中获取用于训练的的数据集集（ x_trian，y_train ），以及用于测试的数据集（ x_test，y_test ）。
 *  x_trian 形状为 (6000, 28, 28) ，表示 6000 张 28*28的图片。
@@ -131,7 +131,7 @@ Layer2 层有 128个神经元，这128个神经元会和 Layer1 中 728 个神�
 Dropout layer 的主要作用就是防止过度拟合。过渡拟合现象主要表现是：**最终模型在训练集上效果好；在测试集上效果差。模型泛化能力弱。**
 Dropout 解决过度拟合的办法之一，就是随机丢弃一部神经元。Demo 中就是使用  Dropout 随机丢弃 20% 神经元。
 
-![](https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/cehbw.png)
+![](https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/ljirl.png)
 
 **第四个 Layer**
 
@@ -170,11 +170,11 @@ tf.keras.layers
 
 Demo 中 epochs = 5  是因为 1次 epoch 很可能得不到最优的权重（weights）。 既然 1 次不能满足，那就 5 次，5 次还不满足就 10 次，直到效果最小化 Loss 的效果不再变化。
 
-![](https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/4na37.png)
+![](https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/vi2f7.png)
 
 - - - - -
 ## 总结
-如果认真阅读了本文，那么我相信你已经对人工智能已经有了整体的认识，本文给了你一个鸟瞰人工智能的视角，摆脱了盲人摸象的感觉。这虽然不是马上把你变成人工智能大神的魔法，但对基本架构的进一步理解会增强你对人工智能的自学能力。无论你是从事前端、后端、全栈等技术开发者，或者只是对人工智能该兴趣，我都希望本文可以带给你一个新的视角去理解人工智能，让你读有所思，思有所得，得有所想，想有所获，或有所益。
+如果认真阅读了本文，那么我相信你已经对人工智能已经有了一点整体的认识，本文给了你一个鸟瞰人工智能的视角，摆脱了盲人摸象的感觉。这虽然不是魔法，能立刻把你变成人工智能大神，但对基本架构的进一步理解会增强你对人工智能的自学能力。无论你是从事前端、后端、全栈等技术开发者，或者只是对人工智能感兴趣，我都希望本文可以带给你一个新的视角去理解人工智能，让你读有所思，思有所得，得有所想，想有所获，或有所益。
 
  ---
 
